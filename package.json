@@ -1,0 +1,24 @@
+{
+  "name": "cationary",
+  "version": "1.0b1",
+  "description": "A cat gibberish dictionary. Cationary, if you will",
+  "main": "cationary.js",
+  "scripts": {
+    "start": "nodemon cationary.js",
+    "lint": "eslint --quiet .",
+    "fix": "eslint --fix ."
+  },
+  "author": "Alexandria 'Hannah' I. Patellis",
+  "license": "",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^6.5.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.7.5",
+    "uuid-apikey": "^1.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
