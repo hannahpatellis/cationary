@@ -1,3 +1,108 @@
-body {
-  background-color: lightpink;
+div#Menu {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  width: 400px;
+  background-color: whitesmoke; 
+  z-index: 1000;
+  padding: 5rem 2rem 2rem 2rem;
+}  
+.Menu-active {
+  visibility: visible!important;
+}
+ul#Menu-Nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul#Menu-Nav li {
+  padding: 1rem 0 1rem 0;
+  font-size: 2rem;
+}
+div#Menu-Byline {
+  display: flex;
+  align-items: center;
+}
+div#Menu-Byline span#Menu-By {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+svg#Menu-hannahap {
+  height: 55px;
+  width: 55px;
+}
+div#Auditorium{
+  height: 99vh;
+  width: 100%;
+}
+nav#NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#NavBar-Flag {
+  margin: 0;
+}
+i#NavBar-Icon {
+  font-size: 2rem;
+  z-index: 1001;
+}
+i#NavBar-Icon:hover {
+  cursor: pointer;
+}
+main#Stage {
+  margin-top: 15vh;
+}
+
+/* WOTD Box */
+div#WOTD-Card {
+  padding: 1rem;
+}
+h1#WOTD-Header {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+}
+div#WOTD-Definition {
+  padding: 2rem 0 2rem 1rem;
+}
+
+/* Scroll Down */
+div#ScrollDown {
+  position: absolute;
+  bottom: 8vh;
+  text-align:center;
+  width: 100%;
+}
+i#ScrollDown-Icon {
+  color: #e03997;
+  font-size: 4rem;
+}
+h2#ScrollDown-Note {
+  font-size: 1rem;
+  margin-top: .5rem;
+}
+
+/* Dictionary */
+#DictionaryAuditorium {
+
+}
+#DictionaryStage {
+
+}
+
+@media only screen and (max-width: 768px) {
+  div#Menu {
+    width: 100%;
+  } 
+  /* Stage */
+  main#Stage {
+    margin-top: 10vh;
+  }
 }
