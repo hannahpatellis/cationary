@@ -1,0 +1,8 @@
+div.input-segment-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span.input-segment-label {
+  padding-right: 1rem;
+}

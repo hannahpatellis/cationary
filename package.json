@@ -1,24 +1,32 @@
 {
-  "name": "cationary",
-  "version": "1.0b1",
-  "description": "A cat gibberish dictionary. Cationary, if you will",
-  "main": "cationary.js",
+  "name": "cationary_server",
+  "version": "1.0.0",
+  "description": "Cationary Server",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon cationary.js",
-    "lint": "eslint --quiet .",
-    "fix": "eslint --fix ."
+    "server": "node index.js",
+    "client": "cd client && npm run start",
+    "start": "concurrently \"nodemon\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Alexandria 'Hannah' I. Patellis",
-  "license": "",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "eslint": "^6.5.1",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "mongoose": "^5.7.5",
-    "uuid-apikey": "^1.4.6"
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.10.4",
+    "morgan": "^1.9.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "validator": "^7.0.0"
   }
 }
